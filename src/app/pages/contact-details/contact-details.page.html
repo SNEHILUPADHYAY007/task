@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>contactDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)=loadContacts()>Load Contacts</ion-button>
+  <ion-list>
+    <ion-item-sliding *ngFor="let c of myContacts">
+      <ion-item>
+        <ion-label>
+            {{c.name.givenName}} <b class="float-right">{{c.phoneNumbers[0].value}}</b>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
